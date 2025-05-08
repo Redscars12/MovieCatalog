@@ -1,9 +1,0 @@
-Microsoft Visual Studio Community 2022 (64-bit) - Current Version 17.13.6
-
-.NET 9.0
-
-Microsoft.EntityFrameworkCore 9.0.4
-
-Microsoft SQL Server 2019 - 15.0.4382.1 (X64)
-
-.NET SDK- 9.0.203
