@@ -1,0 +1,134 @@
+Movie Catalog – Документация
+
+    Общ преглед:
+„Movie Catalog“ е ASP.NET Core MVC уеб приложение, създадено за управление и показване на каталог с филми, режисьори, жанрове и оценки.
+Проектът следва типична многослойна архитектура с контролери, модели, услуги, данни, изгледи и миграции.
+
+────────────────────────────
+Структура на проекта:
+
+   Controllers (Контролери)
+
+DirectorController.cs → Обработва HTTP заявки, свързани с режисьори.
+
+GenreController.cs → Обработва заявки за жанрове.
+
+HomeController.cs → Управлява началната страница и статични страници.
+
+MovieController.cs → Управлява CRUD операциите (създаване, четене, редакция, изтриване) за филми.
+
+RatingController.cs → Управлява оценките на филмите.
+
+      Data (Данни)
+
+   Models (Модели):
+
+Director.cs → Дефинира обекта „Режисьор“.
+
+Genre.cs → Дефинира обекта „Жанр“.
+
+Movie.cs → Дефинира обекта „Филм“.
+
+Rating.cs → Дефинира обекта „Оценка“.
+
+MovieCatalogContext.cs → Entity Framework Core контекст за достъп до базата данни.
+
+   Migrations (Миграции):
+
+InitialCreate.cs → Първоначална миграция за създаване на базата данни.
+
+MakeMovieIdNonNullable.cs → Актуализация за задаване на задължителен MovieId.
+
+Exceptions (Изключения)
+
+Models (Модели)
+
+ErrorViewModel.cs → Модел за обработка на грешки и показването им във View.
+
+      Services (Услуги)
+
+   Interfaces (Интерфейси):
+
+IDirectorService.cs
+
+IGenreService.cs
+
+IMovieService.cs
+
+IRatingService.cs
+
+   Services (Услуги):
+
+DirectorService.cs → Бизнес логика за режисьори.
+
+GenreService.cs → Бизнес логика за жанрове.
+
+MovieService.cs → Бизнес логика за филми.
+
+RatingService.cs → Бизнес логика за оценки.
+
+     Views (Изгледи)
+
+   Director:
+
+All.cshtml → Показва всички режисьори.
+
+Create.cshtml → Форма за създаване на режисьор.
+
+Delete.cshtml → Потвърждение за изтриване на режисьор.
+
+Edit.cshtml → Редактиране на режисьор.
+
+   Genre:
+
+All.cshtml → Показва всички жанрове.
+
+Create.cshtml → Форма за създаване на жанр.
+
+Delete.cshtml → Потвърждение за изтриване на жанр.
+
+Edit.cshtml → Редактиране на жанр.
+
+   Movie:
+
+All.cshtml → Показва всички филми.
+
+Create.cshtml → Форма за създаване на филм.
+
+Delete.cshtml → Потвърждение за изтриване на филм.
+
+Edit.cshtml → Редактиране на филм.
+
+   Rating:
+
+Details.cshtml → Детайли за оценка.
+
+Index.cshtml → Списък с оценки.
+
+   Home:
+
+Index.cshtml → Начална страница.
+
+Privacy.cshtml → Страница с политика за поверителност.
+
+   Shared:
+
+_Layout.cshtml → Основен шаблон за изгледите.
+
+_Layout.cshtml.css → CSS стилове.
+
+_ValidationScriptsPartial.cshtml → Скриптове за валидация на формуляри.
+
+Error.cshtml → Страница за грешки.
+
+_ViewImports.cshtml → Импорти, използвани в Razor изгледите.
+
+_ViewStart.cshtml → Дефинира основния layout за изгледите.
+
+   Конфигурация:
+
+appsettings.json → Основна конфигурация на приложението.
+
+appsettings.Development.json → Конфигурация за development среда.
+
+launchSettings.json → Настройки за стартиране при дебъгване.
